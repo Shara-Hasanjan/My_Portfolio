@@ -58,7 +58,12 @@ export default function Activities() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="bg-[#1f2226] rounded-xl p-6 shadow-lg hover:scale-105 transition"
+              className="
+                bg-[#1f2226] rounded-xl p-6 text-center
+                border border-transparent
+                hover:border-yellow-400
+                transition-all duration-300 
+                "
             >
               <div className="text-yellow-400 text-4xl mb-4">
                 {item.icon}

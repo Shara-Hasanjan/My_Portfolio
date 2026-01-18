@@ -1,78 +1,75 @@
-import React from "react";
 import { motion } from "framer-motion";
+import { FaCode, FaProjectDiagram, FaUsers, FaShieldAlt } from "react-icons/fa";
 
-
-const capabilities = [
+const services = [
   {
-    title: "Frontend Web Apps",
-    tech: "React, Tailwind, Responsive UI",
-    desc: "Building modern, mobile-friendly interfaces with reusable components and clean layouts.",
-    icon: "💻",
+    title: "Software Development Fundamentals",
+    desc: "Strong understanding of programming concepts, data structures, and problem-solving using Python and Java through academic projects.",
+    icon: <FaCode />,
   },
   {
-    title: "Full Stack Systems",
-    tech: "Node / Go, REST APIs, MySQL",
-    desc: "Developing backend services with authentication and database integration.",
-    icon: "🛠️",
+    title: "Web Application Development",
+    desc: "Experience building responsive web applications using HTML, CSS, JavaScript, and React as part of coursework and personal projects.",
+    icon: <FaProjectDiagram />,
   },
   {
-    title: "Software Projects",
-    tech: "Java & Python Applications",
-    desc: "Academic systems using OOP, file handling, and strong problem-solving logic.",
-    icon: "📦",
+    title: "Team Project Collaboration",
+    desc: "Worked in team-based development environments, contributing to design, coding, testing, and documentation phases of projects.",
+    icon: <FaUsers />,
   },
   {
-    title: "Team Projects",
-    tech: "Agile, GitHub, Collaboration",
-    desc: "Working in teams using Scrum, version control, and real project workflows.",
-    icon: "🤝",
+    title: "Basic System Security Concepts",
+    desc: "Exposure to authentication methods and security principles through academic learning and project implementations.",
+    icon: <FaShieldAlt />,
   },
 ];
 
-const Capabilities = () => {
+export default function Services() {
   return (
-    <section id="capabilities" className="py-24 bg-[#2f3338] glow-hover">
-      <div className="max-w-7xl mx-auto px-6 text-center ">
+    <section id="services" className="bg-[#24282c] text-white py-28 px-6 md:px-20">
+      <div className="max-w-7xl mx-auto">
 
-        {/* Section Header */}
-        <p className="text-yellow-400 tracking-widest text-sm mb-3">
-          CAPABILITIES
-        </p>
+        {/* TITLE */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-20"
+        >
+          <p className="text-yellow-400 tracking-widest mb-3">WHAT I DO</p>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Areas of Learning & Practice
+          </h2>
+        </motion.div>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-14">
-          What I Can Build
-        </h2>
-
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {capabilities.map((item, index) => (
-            <div
-              key={index}
-              className="bg-[#1f232a] rounded-2xl p-8 text-left
-                         hover:scale-[1.03] transition duration-300
-                         border border-white/5 hover:border-yellow-400/40
-                         shadow-lg"
+        {/* GRID */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          {services.map((s, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-[#1f2226] rounded-xl p-8 text-center hover:scale-[1.03]                     
+              border border-transparent
+              hover:border-yellow-400 
+              transition-transform duration-300"
             >
-              <div className="text-3xl mb-4">{item.icon}</div>
+              <div className="text-yellow-400 text-4xl mb-5 flex justify-center">
+                {s.icon}
+              </div>
 
-              <h3 className="text-white text-xl font-semibold mb-1">
-                {item.title}
-              </h3>
-
-              <p className="text-yellow-400 text-sm mb-3">
-                {item.tech}
-              </p>
+              <h3 className="text-xl font-semibold mb-3">{s.title}</h3>
 
               <p className="text-gray-400 text-sm leading-relaxed">
-                {item.desc}
+                {s.desc}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
-};
-
-export default Capabilities;
+}

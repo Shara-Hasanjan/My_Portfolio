@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 const navLinks = [
   { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
-  { name: "Build", link: "#capabilities" },
+  { name: "Learning", link: "#services" },
+  { name: "Academics", link: "#education" },
   { name: "Projects", link: "#projects" },
+  { name: "Achievements", link: "#certificates" },
   { name: "Contact", link: "#contact" },
 ];
 

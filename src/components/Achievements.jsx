@@ -3,24 +3,19 @@ import { FaCertificate } from "react-icons/fa";
 
 const certificates = [
   {
-    title: "Python Programming Certificate",
-    org: "Online Course / Institute",
-    file: "/certificates/python_certificate.pdf",
+    title: "Foundation Certificate in Higher Education",
+    org: "Informatics Institute of Technology",
+    file: "https://www.linkedin.com/in/isharahasanjan/details/certifications/1757265222767/single-media-viewer?type=DOCUMENT&profileId=ACoAAFPQjG0BrzSwZnQtJg8R1HHRQyRHn7PE39E&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BHSn23woESZ6qWc%2BexiF9KQ%3D%3D",
   },
   {
-    title: "Web Development Certificate",
-    org: "Online Course / Institute",
-    file: "/certificates/web_certificate.pdf",
+    title: "Microsoft Security Essentials",
+    org: "LinkedIn Learning",
+    file: "https://lnkd.in/dcw5eUws",
   },
   {
-    title: "Java Programming Certificate",
-    org: "Online Course / Institute",
-    file: "/certificates/java_certificate.pdf",
-  },
-  {
-    title: "Other Technical Certification",
-    org: "Workshop / Seminar",
-    file: "/certificates/other_certificate.pdf",
+    title: "Gemini Certification for Students",
+    org: "Google",
+    file: "https://edu.exceedlms.com/student/award/SLD2Au2W7KLhVTsNp8iU1yCU",
   },
 ];
 
@@ -56,7 +51,11 @@ export default function Certificates() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="bg-[#1f2226] rounded-xl p-6 shadow-lg hover:scale-105 transition"
+              className="bg-[#1f2226] rounded-xl p-8
+                border border-transparent
+                hover:border-yellow-400
+                transition-all duration-300
+              "
             >
               <FaCertificate className="text-yellow-400 text-4xl mb-4" />
 

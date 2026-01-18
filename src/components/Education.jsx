@@ -68,7 +68,11 @@ export default function Education() {
 
                 {/* Card */}
                 <div
-                  className={`bg-[#1f2226] rounded-xl p-6 md:w-[45%] shadow-lg ${
+                  className={`bg-[#1f2226] rounded-xl p-6 md:w-[45%]
+                    border border-transparent
+                    hover:border-yellow-400
+                    transition-all duration-300
+                    ${
                     index % 2 === 0
                       ? "md:mr-auto md:text-right"
                       : "md:ml-auto md:text-left"

@@ -51,7 +51,7 @@ export default function Projects() {
         >
           <p className="text-yellow-400 tracking-widest mb-3">PROJECTS</p>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Academic & Practical Projects
+            Practical Projects
           </h2>
         </motion.div>
 
@@ -66,7 +66,9 @@ export default function Projects() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               viewport={{ once: true }}
               onClick={() => setActiveProject(project)}
-              className="cursor-pointer group relative bg-[#1f2226] rounded-xl overflow-hidden shadow-lg"
+              className="cursor-pointer group relative bg-[#1f2226] rounded-xl overflow-hidden shadow-lg                    
+               border border-transparent
+              hover:border-yellow-400"
             >
 
               {/* IMAGE */}
