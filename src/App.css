@@ -1,0 +1,133 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.glow-hover:hover {
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.6);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.bg-waves {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.wave {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(250,204,21,0.25), transparent 70%);
+  filter: blur(80px);
+  animation: float 12s infinite ease-in-out;
+}
+
+.wave1 { top: -100px; left: -100px; }
+.wave2 { bottom: -150px; right: -100px; animation-delay: 4s; }
+.wave3 { top: 40%; left: 60%; animation-delay: 8s; }
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-80px) translateX(60px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+body {
+  cursor: none;
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: #ffd000;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(255, 208, 0, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: 
+    width 0.2s ease,
+    height 0.2s ease,
+    border 0.2s ease,
+    background 0.2s ease,
+    transform 0.05s linear;
+}
+
+/* Hover grow */
+.cursor-hover {
+  width: 55px;
+  height: 55px;
+  background: rgba(255, 208, 0, 0.08);
+  border: 2px solid #ffd000;
+}
+
+/* Click pulse */
+.cursor-click {
+  animation: clickPulse 0.15s ease;
+}
+
+@keyframes clickPulse {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(0.8); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+#contact {
+  min-height: auto !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 60px !important;
+}
+
+footer {
+  margin-top: 0 !important;
+}
+
+
