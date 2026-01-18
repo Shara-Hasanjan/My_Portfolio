@@ -1,48 +1,53 @@
 import { useEffect, useState } from "react";
-
-import Navbar from "./components/Navbar";
+import { AnimatePresence, motion } from "framer-motion";
+import ScrollTop from "./components/ScrollTop";
+import Loader from "./components/Loader";
+import Cursor from "./components/Cursor";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Contact from "./components/Contact";
 import Services from "./components/Services";
-import Education from "./components/Education";
 import Portfolio from "./components/Portfolio";
+import Education from "./components/Education";
 import Achievements from "./components/Achievements";
 import Activities from "./components/Activities";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import ScrollTop from "./components/ScrollTop";
-import Cursor from "./components/Cursor";
-import Loader from "./components/Loader";
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1800); // loader duration
-
+    const timer = setTimeout(() => setLoading(false), 2200); // match progress bar
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) return <Loader />;
+    return (
+      <>
+        <Cursor />
+        <ScrollTop />
+        <AnimatePresence>
+          {loading && <Loader />}
+        </AnimatePresence>
+        {!loading && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <Hero />
+            <About />
+            <Services />
+            <Portfolio />
+            <Education />
+            <Achievements />
+            <Activities />
+            <Contact />
+            <Footer />
+          </motion.div>
+        )}
+      </>
+    );
 
-  return (
-    <div className="bg-[#2f3136] text-white min-h-screen">
-      <Cursor />
-      <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Education />
-      <Portfolio />
-      <Achievements />
-      <Activities />
-      <Contact />
-      <Footer />
-      <ScrollTop />
-    </div>
-  );
 }
 
 export default App;

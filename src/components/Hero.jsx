@@ -1,6 +1,5 @@
 import heroImg from "../assets/hero.png";
 import resume from "../assets/Ishara_CV.pdf";
-import { motion } from "framer-motion";
 import TechBackground from "./TechBackground";
 
 export default function Hero() {
@@ -16,25 +15,15 @@ export default function Hero() {
       <div className="relative z-10 max-w-[1400px] mx-auto h-full grid grid-cols-3 px-14">
 
         {/* LEFT */}
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="flex flex-col justify-center pb-5 pl-2"
-        >
-          <h1 className="text-6xl md:text-7xl xl:text-8xl font-bold leading-tight">
+        <div className="flex flex-col justify-center pb-5 pl-2 text-white">
+          <h1 className="text-6xl md:text-7xl xl:text-8xl font-bold leading-tight text-white">
             Ishara <br />
             Hasanjan<span className="text-yellow-400 ml-1">.</span>
           </h1>
 
           <br />
 
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: 48 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="h-[2px] bg-yellow-400 mb-6"
-          ></motion.div>
+          <div className="h-[2px] w-12 bg-yellow-400 mb-6"></div>
 
           <br />
 
@@ -54,34 +43,24 @@ export default function Hero() {
           >
             CONTACT ME
           </a>
-        </motion.div>
+        </div>
 
         <div></div>
 
         {/* RIGHT */}
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
-          className="flex flex-col justify-center pb-30 pl-20"
-        >
+        <div className="flex flex-col justify-center pb-30 pl-20 text-white">
           <p className="text-yellow-400 tracking-widest text-sm mb-3">
             INTRODUCTION
           </p>
 
-          <h2 className="text-5xl font-bold mb-6">
+          <h2 className="text-5xl font-bold mb-6 text-white">
             UNDERGRADUATE <br /> COMPUTER SCIENCE <br /> STUDENT
           </h2>
-        </motion.div>
+        </div>
       </div>
 
-
-
       {/* HERO IMAGE */}
-      <motion.img
-        initial={{ opacity: 0, y: 80 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
+      <img
         src={heroImg}
         alt="Hero"
         className="absolute bottom-0 right-[32%] h-[92vh] object-contain pointer-events-none drop-shadow-2xl z-10"

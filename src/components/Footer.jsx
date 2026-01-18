@@ -17,7 +17,7 @@ const Footer = () => {
           </h3>
           <p className="text-sm mt-2 text-gray-400">
             Computer Science Undergraduate <br />
-            Full Stack Web Developer
+            
           </p>
         </div>
 
@@ -25,28 +25,55 @@ const Footer = () => {
         <div className="flex justify-center gap-6 text-sm">
           <a href="#home" className="hover:text-yellow-400 transition">Home</a>
           <a href="#about" className="hover:text-yellow-400 transition">About</a>
+          <a href="#services" className="hover:text-yellow-400 transition">Learning</a>
+          <a href="#education" className="hover:text-yellow-400 transition">Academics</a>
           <a href="#projects" className="hover:text-yellow-400 transition">Projects</a>
+          <a href="#certificates" className="hover:text-yellow-400 transition">Achievements</a>
           <a href="#contact" className="hover:text-yellow-400 transition">Contact</a>
         </div>
 
         {/* RIGHT SOCIAL */}
         <div className="flex justify-center md:justify-end gap-5">
-          <a href="https://github.com/yourusername" target="_blank">
-            <img src={github} alt="GitHub" className="w-7 hover:scale-110 transition" />
+
+          <a href="https://github.com/Shara-Hasanjan" target="_blank">
+            <img
+              src={github}
+              alt="GitHub"
+              className="w-10 hover:scale-110 transition"   
+            />
           </a>
 
-          <a href="https://linkedin.com/in/yourusername" target="_blank">
-            <img src={linkedin} alt="LinkedIn" className="w-7 hover:scale-110 transition" />
+          <a href="https://www.linkedin.com/in/isharahasanjan" target="_blank">
+            <img
+              src={linkedin}
+              alt="LinkedIn"
+              className="w-12 hover:scale-110 transition"   
+            />
           </a>
 
-          <a href="https://wa.me/94XXXXXXXXX" target="_blank">
-            <img src={whatsapp} alt="WhatsApp" className="w-7 hover:scale-110 transition" />
+          <a href="https://wa.me/94742144442" target="_blank">
+            <img
+              src={whatsapp}
+              alt="WhatsApp"
+              className="w-12 hover:scale-110 transition"   
+            />
           </a>
 
-          <a href="mailto:yourmail@gmail.com">
-            <img src={email} alt="Email" className="w-7 hover:scale-110 transition" />
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=sharahasanjan@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={email}
+              alt="Email"
+              className="w-12 hover:scale-110 transition"
+            />
           </a>
+
+
         </div>
+
 
       </div>
 
