@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaTimes } from "react-icons/fa";
+import workzupImg from "../assets/workzup.png";
+import portfolioImg from "../assets/portfolio.png";
+import trafficImg from "../assets/traffic.png";
+
 
 const projects = [
   {
@@ -8,21 +12,21 @@ const projects = [
     desc: "Web-based platform connecting job seekers with verified employers for part-time and short-term jobs. Focused on secure authentication, job posting, and application management. Developed using team-based agile workflow.",
     tech: ["React", "MySQL", "Spring Boot","JWT"],
     github: "https://github.com/AdhishaSamarasinghe/Workzup.git", 
-    image: "/workzup.jpg",
+    image: workzupImg,
   },
   {
     title: "Personal Portfolio Website",
     desc: "Responsive portfolio website showcasing academic projects, skills and personal profile with clean UI and smooth navigation.",
     tech: ["React", "CSS", "Tailwind CSS"],
     github: "https://github.com/Shara-Hasanjan/My_Portfolio.git",
-    image: "/portfolio.jpg",
+    image: portfolioImg,
   },
   {
     title: "Traffic Management System",
-    desc: "Java application modeling traffic flow conditions using structured programming and logical decision-making to simulate real-world scenarios.",
-    tech: ["Java"],
+    desc: "Python application modeling traffic data by analyzing the traffic data of the day.",
+    tech: ["Python"],
     github: "https://github.com/Shara-Hasanjan/SD1-CW-Traffic-System.git",
-    image: "/traffic.jpg",
+    image: trafficImg,
   },
 
 ];
