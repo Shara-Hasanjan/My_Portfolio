@@ -8,7 +8,6 @@ const projects = [
     desc: "Web-based platform connecting job seekers with verified employers for part-time and short-term jobs. Focused on secure authentication, job posting, and application management. Developed using team-based agile workflow.",
     tech: ["React", "MySQL", "Spring Boot","JWT"],
     github: "https://github.com/AdhishaSamarasinghe/Workzup.git", 
-    live: "#",
     image: "/workzup.jpg",
   },
   {
@@ -16,7 +15,6 @@ const projects = [
     desc: "Responsive portfolio website showcasing academic projects, skills and personal profile with clean UI and smooth navigation.",
     tech: ["React", "CSS", "Tailwind CSS"],
     github: "https://github.com/Shara-Hasanjan/My_Portfolio.git",
-    live: "#",
     image: "/portfolio.jpg",
   },
   {
@@ -24,7 +22,6 @@ const projects = [
     desc: "Java application modeling traffic flow conditions using structured programming and logical decision-making to simulate real-world scenarios.",
     tech: ["Java"],
     github: "https://github.com/Shara-Hasanjan/SD1-CW-Traffic-System.git",
-    live: "#",
     image: "/traffic.jpg",
   },
 
