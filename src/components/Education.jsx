@@ -5,7 +5,7 @@ const educationData = [
     year: "2024 - Present",
     title: "BSc (Hons) Computer Science",
     place: "University Of Westminster ",
-    desc: "Undergraduate program focused on software engineering, algorithms, databases, and web technologies.",
+    desc: "Studying core computer science subjects including software engineering, algorithms, databases, and web technologies with hands-on project experience.",
   },
   {
     year: "2023",
