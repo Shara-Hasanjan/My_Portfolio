@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import MobileBlock from "./components/MobileBlock";
 import { AnimatePresence, motion } from "framer-motion";
 import ScrollTop from "./components/ScrollTop";
 import Loader from "./components/Loader";
@@ -16,40 +17,62 @@ import Footer from "./components/Footer";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
+  // Loader timer
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2200); // match progress bar
+    const timer = setTimeout(() => setLoading(false), 2200);
     return () => clearTimeout(timer);
   }, []);
 
-    return (
-      <>
-        <Cursor />
-        <Navbar />
-        <ScrollTop />
-        <AnimatePresence>
-          {loading && <Loader />}
-        </AnimatePresence>
-        {!loading && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <Hero />
-            <About />
-            <Services />
-            <Portfolio />
-            <Education />
-            <Achievements />
-            <Activities />
-            <Contact />
-            <Footer />
-          </motion.div>
-        )}
-      </>
-    );
+  // Detect mobile screen
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
 
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  return (
+    <>
+      {/* MOBILE BLOCK PAGE */}
+      {isMobile ? (
+        <MobileBlock />
+      ) : (
+        <>
+          {/* DESKTOP ONLY UI */}
+          <Cursor />
+          <Navbar />
+          <ScrollTop />
+
+          <AnimatePresence>
+            {loading && <Loader />}
+          </AnimatePresence>
+
+          {!loading && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <Hero />
+              <About />
+              <Services />
+              <Portfolio />
+              <Education />
+              <Achievements />
+              <Activities />
+              <Contact />
+              <Footer />
+            </motion.div>
+          )}
+        </>
+      )}
+    </>
+  );
 }
 
 export default App;
