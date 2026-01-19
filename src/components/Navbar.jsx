@@ -4,8 +4,8 @@ const navLinks = [
   { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
   { name: "Learning", link: "#services" },
-  { name: "Academics", link: "#education" },
   { name: "Projects", link: "#projects" },
+  { name: "Academics", link: "#education" },
   { name: "Achievements", link: "#certificates" },
   { name: "Contact", link: "#contact" },
 ];

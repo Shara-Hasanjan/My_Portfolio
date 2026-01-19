@@ -8,7 +8,7 @@ import trafficImg from "../assets/traffic.png";
 
 const projects = [
   {
-    title: "WorkzUp – Job Matching Platform (Team Project)",
+    title: "WorkzUp – Job Matching Platform - SDGP",
     desc: "Web-based platform connecting job seekers with verified employers for part-time and short-term jobs. Focused on secure authentication, job posting, and application management. Developed using team-based agile workflow.",
     tech: ["React", "MySQL", "Spring Boot","JWT"],
     github: "https://github.com/AdhishaSamarasinghe/Workzup.git", 
