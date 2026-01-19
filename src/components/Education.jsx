@@ -4,7 +4,7 @@ const educationData = [
   {
     year: "2024 - Present",
     title: "BSc (Hons) Computer Science",
-    place: "Informatics Institute of Technology (IIT)",
+    place: "University Of Westminster ",
     desc: "Undergraduate program focused on software engineering, algorithms, databases, and web technologies.",
   },
   {
