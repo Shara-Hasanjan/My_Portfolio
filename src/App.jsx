@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import ScrollTop from "./components/ScrollTop";
 import Loader from "./components/Loader";
 import Cursor from "./components/Cursor";
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
@@ -24,6 +25,7 @@ function App() {
     return (
       <>
         <Cursor />
+        <Navbar />
         <ScrollTop />
         <AnimatePresence>
           {loading && <Loader />}
