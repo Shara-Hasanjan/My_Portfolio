@@ -171,16 +171,7 @@ export default function Projects() {
                   <FaGithub /> GitHub
                 </a>
 
-                {activeProject.live !== "#" && (
-                  <a
-                    href={activeProject.live}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-2 border border-yellow-400 text-yellow-400 px-4 py-2 rounded hover:bg-yellow-400 hover:text-black transition"
-                  >
-                    <FaExternalLinkAlt /> Live
-                  </a>
-                )}
+
               </div>
 
             </motion.div>
