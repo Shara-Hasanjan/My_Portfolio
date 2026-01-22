@@ -27,7 +27,7 @@ const Footer = () => {
   return (
     <motion.footer
       variants={container}
-      initial="hidden"
+      initial="visible"
       whileInView="visible"
       viewport={{ once: true }}
       className="relative bg-[#1f232a] text-gray-300 pt-14 pb-6 mt-20"
