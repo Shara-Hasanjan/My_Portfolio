@@ -9,9 +9,9 @@ import trafficImg from "../assets/traffic.png";
 const projects = [
   {
     title: "WorkzUp – Landing Page - SDGP",
-    desc: "Web-based platform connecting job seekers with verified employers for part-time and short-term jobs. Focused on secure authentication, job posting, and application management. Developed using team-based agile workflow.",
+    desc: "Web-based platform connecting job seekers with verified employers for part-time and short-term jobs. Focused on secure authentication, job posting, and application management.",
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/AdhishaSamarasinghe/Workzup.git", 
+    github: "https://github.com/AdhishaSamarasinghe/Workzup.com.lk.git", 
     image: workzupImg,
   },
   {
